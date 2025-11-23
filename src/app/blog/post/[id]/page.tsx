@@ -2,6 +2,8 @@ import Post from "@/app/ui/components/posts/Post";
 import { notFound } from "next/navigation";
 import { env } from "process";
 
+export const dynamic = 'force-dynamic';
+
 export default async function Page({ params }: { params: { id: string } }) {
   const path = await params;
 
