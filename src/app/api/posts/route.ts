@@ -1,0 +1,12 @@
+import { connectTODb } from "../db";
+
+export async function GET() {
+  const { db } = await connectTODb();
+  const posts = await db.collection("posts").find({}).toArray();
+  return new Response(JSON.stringify(posts), {
+    status: 200,
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+}
