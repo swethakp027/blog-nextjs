@@ -1,7 +1,7 @@
 import Post from "@/app/ui/components/posts/Post";
 import { env } from "process";
 
-export const dynamic = 'force-dynamic';
+// export const dynamic = 'force-dynamic';
 
 export default async function Page() {
   const response = await fetch(`${env.SITE_URL}/api/posts`);
